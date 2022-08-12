@@ -1,0 +1,49 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+.search{
+    position: relative;
+    input{
+        padding: 1.5em 5em;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .searchIcon{
+        position: absolute;
+        left: 1.2em;
+        top: 18.5px;
+        font-size: 20px;
+        margin-right: 1em;
+    }
+
+    .darkmode{
+        background-color: $DarkModeElements;
+        color: $DarkModeText;
+
+        &::placeholder{
+            color: $DarkModeText;
+            font-size: $HomeFont;
+        }
+    }
+
+    .lightmode{
+        background-color: $LightModeElements;
+        color: $LightModeText;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        &::placeholder{
+            color: $LightModeText;
+            font-size: $HomeFont;
+        }
+    }
+
+    .darkmodeSearch{
+        color: $DarkModeText;
+    }
+
+    .lightmodeSearch{
+        color: $LightModeText;
+    }
+}

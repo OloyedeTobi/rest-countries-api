@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
+.search {
+  position: relative;
+}
+.search input {
+  padding: 1.5em 5em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.search .searchIcon {
+  position: absolute;
+  left: 1.2em;
+  top: 18.5px;
+  font-size: 20px;
+  margin-right: 1em;
+}
+.search .darkmode {
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 100%);
+}
+.search .darkmode::-moz-placeholder {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 16px;
+}
+.search .darkmode:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 16px;
+}
+.search .darkmode::placeholder {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 16px;
+}
+.search .lightmode {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(200deg, 15%, 8%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.search .lightmode::-moz-placeholder {
+  color: hsl(200deg, 15%, 8%);
+  font-size: 16px;
+}
+.search .lightmode:-ms-input-placeholder {
+  color: hsl(200deg, 15%, 8%);
+  font-size: 16px;
+}
+.search .lightmode::placeholder {
+  color: hsl(200deg, 15%, 8%);
+  font-size: 16px;
+}
+.search .darkmodeSearch {
+  color: hsl(0deg, 0%, 100%);
+}
+.search .lightmodeSearch {
+  color: hsl(200deg, 15%, 8%);
+}/*# sourceMappingURL=SearchInput.css.map */

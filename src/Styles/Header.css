@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  padding: 1em 0;
+}
+.header div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5em;
+}
+.header h3 {
+  font-size: 24px;
+}
+.header button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+.header button div span {
+  margin-left: 7.5px;
+}
+
+.darkmodeHeader {
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 100%);
+}
+.darkmodeHeader button {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.lightmodeHeader {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(200deg, 15%, 8%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.lightmodeHeader button {
+  color: hsl(200deg, 15%, 8%);
+}/*# sourceMappingURL=Header.css.map */

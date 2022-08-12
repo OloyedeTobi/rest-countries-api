@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
+.country-details-con {
+  padding: 3em 5em;
+  height: 100vh;
+}
+.country-details-con div .back {
+  padding: 1em;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+}
+.country-details-con div .back span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.country-details-con div .country-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+.country-details-con div .country-details-container img {
+  flex-basis: 50vw;
+  height: 400px;
+  width: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.country-details-con div .country-details-container .right-about {
+  flex-basis: 50vw;
+  padding-left: 5em;
+  padding-top: 0;
+}
+.country-details-con div .country-details-container .right-about .about-country .about-country-container {
+  display: flex;
+  justify-content: space-between;
+}
+.country-details-con div .country-details-container .right-about .about-country .about-country-container div p {
+  font-weight: 900;
+  font-size: 16px;
+}
+.country-details-con div .country-details-container .right-about .about-country .about-country-container div p span {
+  font-weight: 100;
+}
+
+.darkmodeDetails {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(207deg, 26%, 17%);
+}
+.darkmodeDetails button {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(209deg, 23%, 22%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.lightmodeDetails {
+  color: hsl(200deg, 15%, 8%);
+  background-color: hsl(0deg, 0%, 95%);
+}
+.lightmodeDetails button {
+  color: hsl(200deg, 15%, 8%);
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.border {
+  padding: 0.3em;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 3px;
+}/*# sourceMappingURL=CountryDetails.css.map */

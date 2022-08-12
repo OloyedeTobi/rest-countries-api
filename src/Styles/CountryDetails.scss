@@ -1,0 +1,92 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+.country-details-con{
+    padding: 3em 5em;
+    height: 100vh;
+
+    div{
+        .back{
+            padding: 1em;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+
+            span{
+                margin-left: 10px;
+                font-size: $HomeFont;
+            }
+        }
+
+        .country-details-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2em;
+
+            img{
+                flex-basis: 50vw;
+                height: 400px;
+                width: 550px;
+                object-fit: cover;
+            }
+
+            .right-about{
+                flex-basis: 50vw;
+                padding-left:5em;
+                padding-top: 0;
+                .about-country{
+
+                    .about-country-container{
+                        display: flex;
+                        justify-content: space-between;
+
+                        div{
+
+                            p{
+                                font-weight: 900;
+                                font-size: $HomeFont;
+
+                                span{
+                                    font-weight: 100;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.darkmodeDetails{
+    color: $DarkModeText;
+    background-color: $DarkModeBg;
+    button{
+        color: $DarkModeText;
+        background-color: $DarkModeElements;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
+
+.lightmodeDetails{
+    color: $LightModeText;
+    background-color: $LightModeBg;
+    button{
+        color: $LightModeText;
+        background-color: $LightModeElements;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+
+.border{
+    padding: 0.3em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 3px;
+}

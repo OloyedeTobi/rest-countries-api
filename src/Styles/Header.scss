@@ -1,0 +1,53 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+*{
+    font-family: $fontFamily;
+}
+
+.header{
+    padding: 1em 0;
+    // margin-bottom: 2em;
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5em;
+    }
+    
+    h3{
+        font-size: $DetailsFont;
+    }
+
+    button{
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: $HomeFont;
+
+        div{
+            span{
+                margin-left: 7.50px;
+            }
+        }
+    }
+}
+
+.darkmodeHeader{
+    background-color: $DarkModeElements;
+    color: $DarkModeText;
+
+    button{
+        color: $DarkModeText;
+    }
+}
+
+.lightmodeHeader{
+    background-color: $LightModeElements;
+    color: $LightModeText;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
+
+    button{
+        color: $LightModeText;
+    }
+}
