@@ -1,13 +1,12 @@
 @import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
 
 .search{
     position: relative;
     input{
         padding: 1.5em 5em;
-        border: none;
-        border-radius: 5px;
-        outline: none;
+        @include buttons;
     }
 
     .searchIcon{
@@ -19,8 +18,7 @@
     }
 
     .darkmode{
-        background-color: $DarkModeElements;
-        color: $DarkModeText;
+       @include darkmodeElement;
 
         &::placeholder{
             color: $DarkModeText;
@@ -29,9 +27,7 @@
     }
 
     .lightmode{
-        background-color: $LightModeElements;
-        color: $LightModeText;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+       @include lightmodeElement;
 
         &::placeholder{
             color: $LightModeText;
@@ -45,5 +41,14 @@
 
     .lightmodeSearch{
         color: $LightModeText;
+    }
+}
+
+@media (max-width: 600px){
+    .search{
+        input{
+            padding: 1em 4em;
+        }
+    
     }
 }

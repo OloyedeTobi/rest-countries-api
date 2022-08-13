@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
 
 *{
@@ -7,11 +8,9 @@
 
 .header{
     padding: 1em 0;
-    // margin-bottom: 2em;
 
     div{
-        display: flex;
-        justify-content: space-between;
+        @include flex-sb;
         margin: 0 5em;
     }
     
@@ -20,8 +19,7 @@
     }
 
     button{
-        outline: none;
-        border: none;
+        @include buttons;
         background-color: transparent;
         font-size: $HomeFont;
 
@@ -34,8 +32,7 @@
 }
 
 .darkmodeHeader{
-    background-color: $DarkModeElements;
-    color: $DarkModeText;
+   @include darkmodeElement;
 
     button{
         color: $DarkModeText;
@@ -43,11 +40,17 @@
 }
 
 .lightmodeHeader{
-    background-color: $LightModeElements;
-    color: $LightModeText;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
+    @include lightmodeElement;
 
     button{
         color: $LightModeText;
+    }
+}
+
+@media (max-width: 700px){
+    .header{
+        div{
+            margin: 0 2em;
+        }
     }
 }

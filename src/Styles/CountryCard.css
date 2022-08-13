@@ -3,7 +3,6 @@
   min-width: auto;
   width: 250px;
   margin: 0 auto;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   padding-bottom: 0.5em;
   cursor: pointer;
@@ -29,13 +28,19 @@ img {
 }
 
 .darkmodeCard {
-  background-color: hsl(209deg, 23%, 22%);
   color: hsl(0deg, 0%, 100%);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: hsl(209deg, 23%, 22%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .lightmodeCard {
-  background-color: hsl(0deg, 0%, 100%);
   color: hsl(200deg, 15%, 8%);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media (max-width: 600px) {
+  .country-card {
+    width: 80vw;
+  }
 }/*# sourceMappingURL=CountryCard.css.map */

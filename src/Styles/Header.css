@@ -15,8 +15,9 @@
   font-size: 24px;
 }
 .header button {
-  outline: none;
   border: none;
+  outline: none;
+  border-radius: 5px;
   background-color: transparent;
   font-size: 16px;
 }
@@ -25,18 +26,25 @@
 }
 
 .darkmodeHeader {
-  background-color: hsl(209deg, 23%, 22%);
   color: hsl(0deg, 0%, 100%);
+  background-color: hsl(209deg, 23%, 22%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .darkmodeHeader button {
   color: hsl(0deg, 0%, 100%);
 }
 
 .lightmodeHeader {
-  background-color: hsl(0deg, 0%, 100%);
   color: hsl(200deg, 15%, 8%);
+  background-color: hsl(0deg, 0%, 100%);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .lightmodeHeader button {
   color: hsl(200deg, 15%, 8%);
+}
+
+@media (max-width: 700px) {
+  .header div {
+    margin: 0 2em;
+  }
 }/*# sourceMappingURL=Header.css.map */

@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import Header from './Header';
+import Loader from './Loader';
 import { useParams, useNavigate } from 'react-router-dom';
 import { GeneralContext} from '../Contexts/GeneralContext';
 import * as BsIcons from 'react-icons/bs';
@@ -22,16 +23,14 @@ const CountryDetails = () => {
     const response = await fetch(`https://restcountries.com/v2/alpha/${name}`)
     const jsondata = await response.json();
     !jsondata.status && setData(jsondata);
-    console.log(jsondata)
-    setLoading(false);
     }
-    fetchData()
+    fetchData();
+    setLoading(false);
   }, [name]);
 
 
   useEffect(() => {
     if (updateData) {
-      setUpdateData('');
       const fetchData = async() =>{
       const response = await fetch(`https://restcountries.com/v2/alpha/${updateData}`)
       const jsondata = await response.json();
@@ -52,7 +51,7 @@ const CountryDetails = () => {
           <div>
             <button className='back' onClick={() => navigate("/")}><BsIcons.BsArrowLeft fontWeight="700"/><span>Back</span></button>
             {loading ? (
-              <div>loading...</div>
+              <Loader />
             ) : 
             
             (

@@ -1,0 +1,117 @@
+@-webkit-keyframes animateBg {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animateBg {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+section .loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: animateBg;
+          animation: animateBg;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+section .loader .i6 {
+  --i: 6;
+}
+section .loader .i7 {
+  --i: 7;
+}
+section .loader .i8 {
+  --i: 8;
+}
+section .loader .i9 {
+  --i: 9;
+}
+section .loader .i10 {
+  --i: 10;
+}
+section .loader .i11 {
+  --i: 11;
+}
+section .loader .i12 {
+  --i: 12;
+}
+section .loader .i13 {
+  --i: 13;
+}
+section .loader .i14 {
+  --i: 14;
+}
+section .loader .i15 {
+  --i: 15;
+}
+section .loader .i16 {
+  --i: 16;
+}
+section .loader .i17 {
+  --i: 17;
+}
+section .loader .i18 {
+  --i: 18;
+}
+section .loader .i19 {
+  --i: 19;
+}
+section .loader .i20 {
+  --i: 20;
+}
+section .loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+section .loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(15px * var(--i) / 20);
+  height: calc(15px * var(--i) / 20);
+  border-radius: 50%;
+}
+
+.darkLoad {
+  background-color: hsl(207deg, 26%, 17%);
+}
+.darkLoad .loader span::before {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.lightLoad {
+  background-color: hsl(0deg, 0%, 95%);
+}
+.lightLoad .loader span::before {
+  background-color: hsl(200deg, 15%, 8%);
+}/*# sourceMappingURL=Loader.css.map */

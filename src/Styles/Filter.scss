@@ -1,12 +1,11 @@
 @import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
 .filter{
     position: relative;
     .filter-btn{
+        @include buttons;
         padding: 1.2em 2em;
-        border: none;
-        border-radius: 5px;
-        outline: none;
         font-size: $HomeFont;
         margin-bottom: 1em;
     }
@@ -36,20 +35,15 @@
 
 
     .lightmodeFilter{
-        background-color: $LightModeElements;
-        color: $LightModeText;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        @include lightmodeElement;
     }
 
     .darkmodeFilter{
-        background-color: $DarkModeElements;
-        color: $DarkModeText;
+        @include darkmodeElement;
     }
 
     .darkmodeList{  
-        background-color: $DarkModeElements;
-        color: $DarkModeText;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        @include darkmodeElement;
     
         button{
             color: $DarkModeText;
@@ -62,10 +56,7 @@
 
 
     .lightmodeList{  
-
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-color: $LightModeElements;
-        color: $LightModeText;
+        @include lightmodeElement;
     
         button{
             color: $LightModeText;
@@ -73,5 +64,14 @@
             background-color: $LightModeBg;
         }
         }    
+    }
+}
+
+@media (max-width: 600px){
+    .filter{
+        .filter-btn{
+            padding: 0.8em 2em;
+        }
+    
     }
 }

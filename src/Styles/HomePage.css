@@ -21,11 +21,52 @@
 }
 
 .darkmode {
-  background-color: hsl(207deg, 26%, 17%);
   color: hsl(0deg, 0%, 100%);
+  background-color: hsl(207deg, 26%, 17%);
 }
 
 .lightmode {
-  background-color: hsl(0deg, 0%, 98%);
   color: hsl(200deg, 15%, 8%);
+  background-color: hsl(0deg, 0%, 95%);
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .home {
+    padding: 0 2em;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    margin-top: 2.5em;
+  }
+  .home {
+    padding: 0 2em;
+  }
+  .home .filter-input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1em;
+  }
+  .home .filter-input-area .in {
+    margin-bottom: 0.5em;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=HomePage.css.map */

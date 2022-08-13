@@ -9,6 +9,7 @@ const   CountryCard = ({ name, alpha, population, region, capital, flag }) => {
   const { darkTheme } = useContext(GeneralContext);
 
   return (
+    <>
     <div onClick={() => navigate(`/${alpha}`)} className={`country-card ${darkTheme ? 'darkmodeCard' : 'lightmodeCard'}`}>
       <div>
          <img src={`${flag}`} alt="country flag" />
@@ -20,6 +21,7 @@ const   CountryCard = ({ name, alpha, population, region, capital, flag }) => {
         <p>Capital: <span>{capital}</span></p>
       </div>
     </div>
+  </>
   )
 }
 

@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
 .country-details-con {
   padding: 3em 5em;
-  height: 100vh;
+  min-height: 100%;
 }
 .country-details-con div .back {
-  padding: 1em;
   border: none;
   outline: none;
   border-radius: 5px;
+  padding: 1em;
   font-size: 16px;
-  display: flex;
 }
 .country-details-con div .back span {
   margin-left: 10px;
@@ -19,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2em;
+  margin: 2em auto;
 }
 .country-details-con div .country-details-container img {
   flex-basis: 50vw;
@@ -36,6 +35,7 @@
 .country-details-con div .country-details-container .right-about .about-country .about-country-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .country-details-con div .country-details-container .right-about .about-country .about-country-container div p {
   font-weight: 900;
@@ -52,7 +52,7 @@
 .darkmodeDetails button {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(209deg, 23%, 22%);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .lightmodeDetails {
@@ -62,13 +62,41 @@
 .lightmodeDetails button {
   color: hsl(200deg, 15%, 8%);
   background-color: hsl(0deg, 0%, 100%);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .border {
-  padding: 0.3em;
   border: none;
   outline: none;
   border-radius: 5px;
+  padding: 0.3em;
   margin-right: 3px;
+}
+
+@media (max-width: 600px) {
+  .country-details-con {
+    padding: 2em 2em;
+    max-width: 100%;
+    min-height: 100%;
+  }
+  .country-details-con div .country-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .country-details-con div .country-details-container img {
+    height: 300px;
+    width: 80%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .country-details-con div .country-details-container .right-about {
+    flex-basis: 50vw;
+    padding-left: 0em;
+    padding-top: 0;
+  }
+  .country-details-con div .country-details-container .right-about .about-country-container {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=CountryDetails.css.map */

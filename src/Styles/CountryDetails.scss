@@ -1,18 +1,16 @@
 @import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
 
 .country-details-con{
     padding: 3em 5em;
-    height: 100vh;
+    min-height: 100%;
 
     div{
         .back{
+            @include buttons;
             padding: 1em;
-            border: none;
-            outline: none;
-            border-radius: 5px;
             font-size: 16px;
-            display: flex;
 
             span{
                 margin-left: 10px;
@@ -21,10 +19,10 @@
         }
 
         .country-details-container{
-            display: flex;
-            justify-content: space-between;
+           @include flex-sb;
             align-items: center;
-            margin-top: 2em;
+            margin: 2em auto;
+        
 
             img{
                 flex-basis: 50vw;
@@ -40,8 +38,8 @@
                 .about-country{
 
                     .about-country-container{
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex-sb;
+                        flex-wrap: wrap;
 
                         div{
 
@@ -64,29 +62,56 @@
 }
 
 .darkmodeDetails{
-    color: $DarkModeText;
-    background-color: $DarkModeBg;
+    @include darkmodeBg;
     button{
-        color: $DarkModeText;
-        background-color: $DarkModeElements;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        @include darkmodeElement;
     }
 }
 
 .lightmodeDetails{
-    color: $LightModeText;
-    background-color: $LightModeBg;
+    @include lightmodeBg;
     button{
-        color: $LightModeText;
-        background-color: $LightModeElements;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        @include lightmodeElement;
     }
 }
 
 .border{
+    @include buttons;
     padding: 0.3em;
-    border: none;
-    outline: none;
-    border-radius: 5px;
     margin-right: 3px;
+}
+
+
+@media (max-width: 600px){
+    .country-details-con{
+        padding: 2em 2em;
+        max-width: 100%;
+        min-height: 100%;
+
+        div{
+            .country-details-container{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                img{
+    
+                    height: 300px;
+                    width: 80%;
+                    object-fit: cover;
+                }
+
+                .right-about{
+                    flex-basis: 50vw;
+                    padding-left:0em;
+                    padding-top: 0;
+
+                    .about-country-container{
+                        display: flex;
+                        flex-direction: column;
+                }
+            }
+         }
+        }
+    }
 }

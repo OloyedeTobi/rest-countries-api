@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
 
 *{
@@ -8,11 +9,11 @@
 .home{
   padding: 0 5em;
   min-height: 100vh;
-.filter-input-area{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2em;
-}
+
+    .filter-input-area{
+        @include flex-sb;
+        padding-top: 2em;
+    }
 
 
 }
@@ -26,12 +27,58 @@
     }
 
     .darkmode{
-        background-color: $DarkModeBg;
-        color: $DarkModeText;
+        @include darkmodeBg;
     }
 
     .lightmode{
-        background-color: $LightModeBg;
-        color: $LightModeText;
+        @include lightmodeBg;
     }
-    
+
+    @media (max-width: 1200px){
+        .grid{
+            grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+}
+}
+
+@media (max-width: 700px){
+    .home{
+        padding: 0 2em;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+}
+}
+
+
+@media (max-width: 600px){
+    .grid{
+        margin-top: 2.5em;
+    }
+    .home{
+        padding: 0 2em;
+
+        .filter-input-area{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 1em;
+
+            .in{
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+    .grid{
+        grid-template-columns: 1fr;
+}
+}
+
+

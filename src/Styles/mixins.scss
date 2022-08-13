@@ -1,0 +1,36 @@
+@import "variables";
+
+@mixin darkmodeElement{
+   color: $DarkModeText;
+   background-color: $DarkModeElements;
+// box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 8px 0px;;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+@mixin darkmodeBg{
+    color: $DarkModeText;
+    background-color: $DarkModeBg;
+ }
+
+ @mixin lightmodeElement{
+    color: $LightModeText;
+    background-color: $LightModeElements;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+ }
+
+ @mixin lightmodeBg{
+    color: $LightModeText;
+    background-color: $LightModeBg;
+ }
+
+ @mixin buttons{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+ }
+
+ @mixin flex-sb{
+    display: flex;
+    justify-content: space-between;
+ }

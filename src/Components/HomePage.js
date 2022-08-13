@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { GeneralContext } from '../Contexts/GeneralContext';
 import Header from './Header';
+import Loader from './Loader';
 import Input from './SearchInput';
 import Filter from './Filter';
 import CountryCard from './CountryCard';
@@ -16,11 +17,11 @@ const HomePage = () => {
       <main>
         <div>
           <div className='filter-input-area'>
-            <Input />
-            <Filter />
+            <div className='in'><Input /></div>
+            <div><Filter /></div>
           </div>
           {loading ? (
-            <div>loading...</div>
+            <Loader />
           ) : (
             <div className='grid'>
               {data.map(country => {
