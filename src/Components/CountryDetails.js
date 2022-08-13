@@ -13,19 +13,17 @@ const CountryDetails = () => {
   const [data, setData] = useState(null);
   const [updateData, setUpdateData] = useState(null);
   const { name } = useParams();
-  const { darkTheme, loading, setLoading } = useContext(GeneralContext);
+  const { darkTheme} = useContext(GeneralContext);
   const navigate = useNavigate();
 
 
   useEffect(() => {
-    setLoading(true);
     const fetchData = async() =>{
     const response = await fetch(`https://restcountries.com/v2/alpha/${name}`)
     const jsondata = await response.json();
     !jsondata.status && setData(jsondata);
     }
     fetchData();
-    setLoading(false);
   }, [name]);
 
 
@@ -46,16 +44,15 @@ const CountryDetails = () => {
   return (
     <>
       <Header />
-      {data  && (
         <main className={`country-details-con ${darkTheme ? 'darkmodeDetails' : 'lightmodeDetails'}`}>
           <div>
             <button className='back' onClick={() => navigate("/")}><BsIcons.BsArrowLeft fontWeight="700"/><span>Back</span></button>
-            {loading ? (
+            {!data ? (
               <Loader />
             ) : 
             
             (
-              <div className='country-details-container'>
+             data && <div className='country-details-container'>
                 <img src={`${data.flag}`} alt="flag" />
                 <div className='right-about'>
                   <div className='about-country'>
@@ -91,13 +88,14 @@ const CountryDetails = () => {
                         })}
                       </div>
                     </div>
+                      
                   )}        
               </div>
             </div>
             )}
           </div>
         </main>
-      )}
+      
     </>
   )
 }

@@ -8,7 +8,7 @@ const Loader = () =>{
     return(
  <>
     <section className={darkTheme ? 'darkLoad' : 'lightLoad'}>
-        <div class="loader">
+        <div className="loader">
             <span className="i6"></span>
             <span className="i7"></span>
             <span className="i8"></span>
