@@ -4,7 +4,7 @@ import Loader from './Loader';
 import { useParams, useNavigate } from 'react-router-dom';
 import { GeneralContext} from '../Contexts/GeneralContext';
 import * as BsIcons from 'react-icons/bs';
-import '../Styles/CountryDetails.css'
+import '../Styles/CountryDetails.css';
 
 
 
